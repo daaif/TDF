@@ -3,11 +3,18 @@ Task Distribution Framework **TDF**
 ===================================
 Framework de distribution de taches basé sur le système multi-agents **Jade**.
 
-Pour utiliser le framwork, vous devez définir les données et les traitements de vos taches.
-
 
 Mise en route
 =============
+
+Pour utiliser le framwork, vous devez : 
+1. définir les données et les traitements de vos taches.
+2. Définir une interface pour :
+ 	- gérer la plateforme Multi-Agents 
+ 	- Préparer les taches et les ajouter dans la file d'attente
+ 	- configurer, lancer et suivre l'éxécution des taches.
+
+
 ## Données de la tache
 Eendre la classe ``AbstractTaskDataObject`` pour définir vos propres structures de données. 
 ``` java
