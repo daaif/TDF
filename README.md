@@ -7,7 +7,7 @@ Framework de distribution de taches basé sur le système multi-agents **Jade**.
 Mise en route
 =============
 
-Pour utiliser le framwork, vous devez : 
+L'utilisation du framework vous permet de : 
 
 1. définir les données et les traitements de vos taches.
 2. Définir une interface pour :
