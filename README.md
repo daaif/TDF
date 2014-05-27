@@ -91,7 +91,7 @@ public class DummyLocalPostTask extends AbstractLocalPostTask{
 
 ```
 
-#Définir l'interface de l'application.
+##Définir l'interface de l'application.
 
 Le plus simple est d'étendre la classe ``da.gui.JFrameGui``
 
