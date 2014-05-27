@@ -11,9 +11,10 @@ Pour utiliser le framwork, vous devez :
 
 1. définir les données et les traitements de vos taches.
 2. Définir une interface pour :
- 	-- gérer la plateforme Multi-Agents 
- 	-- Préparer les taches et les ajouter dans la file d'attente
- 	-- configurer, lancer et suivre l'éxécution des taches.
+
+ 	- gérer la plateforme Multi-Agents 
+ 	- Préparer les taches et les ajouter dans la file d'attente
+ 	- configurer, lancer et suivre l'éxécution des taches.
 
 
 ## Données de la tache
