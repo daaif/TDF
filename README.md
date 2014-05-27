@@ -97,6 +97,6 @@ Le plus simple est d'étendre la classe ``da.gui.JFrameGui``
 
 Cette classe implémente les interfaces ``PlatformEventListener`` et ``TaskWorkflowEvent``
 
--``PlatformEventListener`` permet la gestion de la plateforme multi-agents Jade. 
--``TaskWorkflowEvent`` permet de suivre le processus d'exécution des taches.
+* ``PlatformEventListener`` permet la gestion de la plateforme multi-agents Jade. 
+* ``TaskWorkflowEvent`` permet de suivre le processus d'exécution des taches.
 
