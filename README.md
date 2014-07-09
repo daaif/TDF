@@ -1,44 +1,44 @@
 
 Task Distribution Framework **TDF**
 ===================================
-Framework de distribution de taches basé sur le système multi-agents **Jade**.
+Task distribution framework based on the **Jade** multi-agent system.
 
 
-Mise en route
+Getting started
 =============
 
-L'utilisation du framework vous permet de : 
+Using the framework allows you to : 
 
-1. définir les données et les traitements de vos taches.
-2. Définir une interface pour :
+1. Define data and processing details for your tasks.
+2. Define an interface for :
 
- 	- gérer la plateforme Multi-Agents 
- 	- Préparer les taches et les ajouter dans la file d'attente
- 	- configurer, lancer et suivre l'éxécution des taches.
+ 	- managing the multi-agent platform
+ 	- preparing tasks and adding them to the queue
+ 	- configuring, running and monitoring task execution.
 
 
-## Données de la tache
-Eendre la classe ``AbstractTaskDataObject`` pour définir vos propres structures de données. 
+## Task data
+Expand the class ``AbstractTaskDataObject`` to define your own data structures.
 ``` java
 
 import da.mas.task.AbstractTaskDataObject;
 
 public class DummyDataObject extends AbstractTaskDataObject{
 	
-	  // Définir votre structure ici.
+	  // Define your structure here..
 	
 }
 ```
 
-## Traitements de la tache
-Une tache est exécutée en trois étapes :
+## Task processing
+There are three stages in executing a task:
 
-1. Initialisation (**LocalPreTask**)
-2. Exécution (**RemoteTask**)
-3. Finalisation (**LocalPostTask**)
+1. Initialization (**LocalPreTask**)
+2. Execution (**RemoteTask**)
+3. Finalization (**LocalPostTask**)
 
-###Initialisation
-L'initialisation s'exécute sur la machine locale. Il suffit d'étendre la classe ``AbstractPreLocalTask``
+###Initialization
+Tasks are initialized on the local machine. Simply expand the class  ``AbstractPreLocalTask``
 
 ``` java
 
@@ -49,7 +49,7 @@ public class DummyLocalPreTask extends AbstractLocalPreTask {
 	@Override
 	public void doLocalPreTask() {
 	
-			// Définir ici les actions à effectuer
+			// Define the actions to be carried out here
 		
 	}
 
@@ -58,8 +58,8 @@ public class DummyLocalPreTask extends AbstractLocalPreTask {
 
 ```
 
-###Exécution
-L'exécution s'effectue sur l'une des machines distantes connectées. Il suffit d'étendre la classe ``AbstractRemoteTask``
+###Execution
+Tasks are executed on one of the connected remote machines. Simply expand the class ``AbstractRemoteTask``
 
 ``` java
 
@@ -70,9 +70,9 @@ public class DummyRemoteTask extends AbstractRemoteTask{
 	
 	@Override
 	public void doRemoteTask() {
-		// Définir ici les actions à effectuer
-		// C'est à ce niveau qu'il faut définir les actions
-		// consommatrices de ressources
+		// Define the actions to be carried out here
+        // This is where resource-consuming actions
+        // must be defined
 	}
 	
 }
@@ -80,8 +80,8 @@ public class DummyRemoteTask extends AbstractRemoteTask{
 
 ```
 
-###Finalisation
-La finalisation de la tache s'exécute sur la machine locale. Il suffit d'étendre la classe ``AbstractPostLocalTask``
+###Finalization
+Tasks are finalized on the local machine. Simply expand the class ``AbstractPostLocalTask``
 
 ``` java
 
@@ -91,7 +91,7 @@ public class DummyLocalPostTask extends AbstractLocalPostTask{
 	
 	@Override
 	public void doLocalPostTask() {
-		// Définir ici les actions à effectuer
+		// Define the actions to be carried out here
 	}
 
 	
@@ -100,12 +100,12 @@ public class DummyLocalPostTask extends AbstractLocalPostTask{
 
 ```
 
-##Définir l'interface de l'application.
+##Define the application interface.
 
-Le plus simple est d'étendre la classe ``da.gui.JFrameGui``
+The easiest way to do this is to expand the class  ``da.gui.JFrameGui``
 
-Cette classe implémente les interfaces ``PlatformEventListener`` et ``TaskWorkflowEvent``
+This class implements the ``PlatformEventListener`` and ``TaskWorkflowEvent`` interfaces.
 
-* ``PlatformEventListener`` permet la gestion de la plateforme multi-agents Jade. 
-* ``TaskWorkflowEvent`` permet de suivre le processus d'exécution des taches.
+* ``PlatformEventListener`` allows you to manage the Jade multi-agent platform.
+* ``TaskWorkflowEvent`` allows you to monitor the task execution process.
 
