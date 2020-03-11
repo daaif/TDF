@@ -37,7 +37,7 @@ There are three stages in executing a task:
 2. Execution (**RemoteTask**)
 3. Finalization (**LocalPostTask**)
 
-#Initialization
+### Initialization
 Tasks are initialized on the local machine. Simply expand the class  ``AbstractPreLocalTask``
 
 ``` java
@@ -58,7 +58,7 @@ public class DummyLocalPreTask extends AbstractLocalPreTask {
 
 ```
 
-#Execution
+### Execution
 Tasks are executed on one of the connected remote machines. Simply expand the class ``AbstractRemoteTask``
 
 ``` java
@@ -80,7 +80,7 @@ public class DummyRemoteTask extends AbstractRemoteTask{
 
 ```
 
-#Finalization
+### Finalization
 Tasks are finalized on the local machine. Simply expand the class ``AbstractPostLocalTask``
 
 ``` java
@@ -100,7 +100,7 @@ public class DummyLocalPostTask extends AbstractLocalPostTask{
 
 ```
 
-#Define the application interface.
+### Define the application interface.
 
 The easiest way to do this is to expand the class  ``da.gui.JFrameGui``
 
